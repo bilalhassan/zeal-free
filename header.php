@@ -24,7 +24,6 @@
     
 <div id="zeal-search" class="noshow">
 
-
     <span class="fa fa-close"></span>
 
     <div class="row animated slideInDown">
@@ -55,15 +54,15 @@
                             
                             <div>
                             
-                                <h1 class="header-title <?php echo get_theme_mod( 'zeal_logo_or_title', 'logo' ) == 'title' ? esc_attr( '' ) : esc_attr( 'zeal-hidden' ); ?>">
+                                <h1 class="header-title <?php echo get_theme_mod( 'zeal_logo_or_title', 'title' ) == 'title' ? esc_attr( '' ) : esc_attr( 'zeal-hidden' ); ?>">
                                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html( bloginfo( 'name' ) ); ?></a>
                                 </h1>
                                 
-                                <p class="header-description <?php echo get_theme_mod( 'zeal_tagline_toggle', 'show' ) == 'show' && get_theme_mod( 'zeal_logo_or_title', 'logo' ) == 'title' ? '' : 'zeal-hidden' ; ?>">
+                                <p class="header-description <?php echo get_theme_mod( 'zeal_tagline_toggle', 'show' ) == 'show' && get_theme_mod( 'zeal_logo_or_title', 'title' ) == 'title' ? '' : 'zeal-hidden' ; ?>">
                                     <?php esc_html( bloginfo( 'description' ) ); ?>
                                 </p>
                                 
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="<?php echo get_theme_mod( 'zeal_logo_or_title', 'logo' ) == 'logo' ? esc_attr( '' ) : esc_attr( 'zeal-hidden' ); ?>">
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="<?php echo get_theme_mod( 'zeal_logo_or_title', 'title' ) == 'logo' ? esc_attr( '' ) : esc_attr( 'zeal-hidden' ); ?>">
                                     <img src="<?php echo esc_url( get_theme_mod( 'zeal_header_logo', get_template_directory_uri() . '/inc/images/zeal-logo.png' ) ); ?>" 
                                          alt="<?php esc_attr( bloginfo( 'name' ) ); ?>" 
                                          style="height: <?php echo esc_attr( get_theme_mod( 'zeal_logo_size', 55 ) ); ?>px; width: auto;"

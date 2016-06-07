@@ -51,7 +51,7 @@ $wp_customize->add_panel( 'homepage', array (
     ) );
     
     $wp_customize->add_setting( 'zeal_the_featured_post_button', array (
-        'default'               => __( 'Read More', 'zeal' ),
+        'default'               => __( 'Read More ...', 'zeal' ),
         'transport'             => 'refresh',
         'sanitize_callback'     => 'zeal_sanitize_text',
     ) );
@@ -102,7 +102,7 @@ $wp_customize->add_panel( 'homepage', array (
     ) );
     
     $wp_customize->add_setting( 'zeal_the_featured_post2_button', array (
-        'default'               => __( 'Read More', 'zeal' ),
+        'default'               => __( 'Read More ...', 'zeal' ),
         'transport'             => 'refresh',
         'sanitize_callback'     => 'zeal_sanitize_text',
     ) );

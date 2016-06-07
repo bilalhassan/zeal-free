@@ -72,11 +72,6 @@ function zeal_setup() {
 		'image',
 	) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'zeal_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // zeal_setup
 add_action( 'after_setup_theme', 'zeal_setup' );
@@ -94,13 +89,6 @@ function zeal_content_width() {
 add_action( 'after_setup_theme', 'zeal_content_width', 0 );
 
 
-
-
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

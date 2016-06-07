@@ -18,9 +18,6 @@ add_action( 'customize_controls_enqueue_scripts', 'zeal_enqueue_customizer_style
  */
 
 function zeal_customize_register_alt( $wp_customize ) {
-    $wp_customize->remove_section( 'header_image' );
-    $wp_customize->remove_section( 'background_image' );
-    $wp_customize->remove_section( 'colors' );
     $wp_customize->remove_section( 'static_front_page' );
     $wp_customize->remove_section( 'title_tagline' );    
 }
@@ -30,9 +27,6 @@ function zeal_customize_register( $wp_customize ) {
 //        delete_option('theme_mods_zeal');
     
         // Resets
-        $wp_customize->remove_section( 'header_image' );
-        $wp_customize->remove_section( 'background_image' );
-        $wp_customize->remove_section( 'colors' );
         $wp_customize->remove_section( 'static_front_page' );
         $wp_customize->remove_section( 'title_tagline' );
 

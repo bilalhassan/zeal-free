@@ -18,7 +18,7 @@ get_header(); ?>
 
                             <h1 class="entry-title">
 
-                                <?php echo the_title(); ?>
+                                <?php echo esc_html( the_title() ); ?>
 
                             </h1>
 

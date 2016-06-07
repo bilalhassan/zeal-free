@@ -55,17 +55,17 @@
                             
                             <div>
                             
-                                <h1 class="header-title <?php echo get_theme_mod( 'zeal_logo_or_title', 'logo' ) == 'title' ? '' : 'zeal-hidden' ; ?>">
-                                    <a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a>
+                                <h1 class="header-title <?php echo get_theme_mod( 'zeal_logo_or_title', 'logo' ) == 'title' ? esc_attr( '' ) : esc_attr( 'zeal-hidden' ); ?>">
+                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html( bloginfo( 'name' ) ); ?></a>
                                 </h1>
                                 
                                 <p class="header-description <?php echo get_theme_mod( 'zeal_tagline_toggle', 'show' ) == 'show' && get_theme_mod( 'zeal_logo_or_title', 'logo' ) == 'title' ? '' : 'zeal-hidden' ; ?>">
-                                    <?php bloginfo( 'description' ); ?>
+                                    <?php esc_html( bloginfo( 'description' ) ); ?>
                                 </p>
                                 
-                                <a href="<?php echo home_url( '/' ); ?>" class="<?php echo get_theme_mod( 'zeal_logo_or_title', 'logo' ) == 'logo' ? '' : 'zeal-hidden' ; ?>">
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="<?php echo get_theme_mod( 'zeal_logo_or_title', 'logo' ) == 'logo' ? esc_attr( '' ) : esc_attr( 'zeal-hidden' ); ?>">
                                     <img src="<?php echo esc_url( get_theme_mod( 'zeal_header_logo', get_template_directory_uri() . '/inc/images/zeal-logo.png' ) ); ?>" 
-                                         alt="<?php bloginfo( 'name' ); ?>" 
+                                         alt="<?php esc_attr( bloginfo( 'name' ) ); ?>" 
                                          style="height: <?php echo esc_attr( get_theme_mod( 'zeal_logo_size', 55 ) ); ?>px; width: auto;"
                                          class="header-logo">
                                 </a>
@@ -88,8 +88,8 @@
 
                                             <li class="menu-item menu-item-type-custom menu-item-object-custom">
 
-                                                <a href="<?php echo admin_url( 'nav-menus.php' ); ?>">
-                                                   ADD A PRIMARY MENU?
+                                                <a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>">
+                                                   <?php echo __( 'ADD A PRIMARY MENU?', 'zeal' ); ?>
                                                 </a>
 
                                             </li>

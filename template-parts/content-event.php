@@ -44,9 +44,9 @@
         
         <div class="row">
         
-            <div class="col-sm-<?php echo $col_1_width; ?> single-post-left">
+            <div class="col-sm-<?php echo esc_attr( $col_1_width ); ?> single-post-left">
                 
-                <a href="<?php echo has_post_thumbnail( get_the_ID() ) ? $image[0] : $image; ?>" data-lightbox="<?php the_title(); ?>">
+                <a href="<?php echo has_post_thumbnail( get_the_ID() ) ? esc_url( $image[0] ) : esc_url( $image ); ?>" data-lightbox="<?php esc_attr( the_title() ); ?>">
                     
                     <?php
                         if( has_post_thumbnail( get_the_ID() ) ) : 
@@ -55,7 +55,7 @@
                         
                         else : ?>
                     
-                            <img src="<?php echo has_post_thumbnail( get_the_ID() ) ? $image[0] : $image; ?>" alt="Featured Image" />
+                            <img src="<?php echo has_post_thumbnail( get_the_ID() ) ? esc_url( $image[0] ) : esc_url( $image ); ?>" alt="<?php echo __( 'Featured Image', 'zeal' ); ?>" />
                         
                     <?php endif; ?>
                     
@@ -67,9 +67,9 @@
 
                             <?php if ( get_post_meta( get_the_ID(), 'event_metalocation', true ) ) : ?>
                         
-                                <span class="meta-heading">LOCATION :</span>
+                                <span class="meta-heading"><?php echo __( 'LOCATION :', 'zeal' ); ?></span>
                                 <span class="meta-value">
-                                    <?php echo get_post_meta( get_the_ID(), 'event_metalocation', true ); ?>
+                                    <?php echo esc_html( get_post_meta( get_the_ID(), 'event_metalocation', true ) ); ?>
                                 </span>
 
                                 <br>
@@ -78,9 +78,9 @@
                         
                             <?php if ( get_post_meta( get_the_ID(), 'event_metadate', true ) ) : ?>
 
-                                <span class="meta-heading">DATE :</span>
+                                <span class="meta-heading"><?php echo __( 'DATE :', 'zeal' ); ?></span>
                                 <span class="meta-value">
-                                    <?php echo date( 'M jS, Y', strtotime( get_post_meta( get_the_ID(), 'event_metadate', true ) ) ); ?>
+                                    <?php echo esc_html( date( 'M jS, Y', strtotime( get_post_meta( get_the_ID(), 'event_metadate', true ) ) ) ); ?>
                                 </span>
                             
                                 <br>
@@ -89,10 +89,10 @@
                             
                             <?php if ( get_post_meta( get_the_ID(), 'event_metatime_start', true ) && get_post_meta( get_the_ID(), 'event_metatime_end', true ) ) : ?>
                                 
-                                <span class="meta-heading">TIME :</span>
+                                <span class="meta-heading"><?php echo __( 'TIME :', 'zeal' ); ?></span>
                                 <span class="meta-value">
-                                    <?php echo date( 'g:i', strtotime( get_post_meta( get_the_ID(), 'event_metatime_start', true ) ) ); ?>
-                                    to <?php echo date( 'g:i a', strtotime( get_post_meta( get_the_ID(), 'event_metatime_end', true ) ) ); ?>
+                                    <?php echo esc_html( date( 'g:i', strtotime( get_post_meta( get_the_ID(), 'event_metatime_start', true ) ) ) ); ?>
+                                    <?php echo __('to', 'zeal' ); ?> <?php echo esc_html( date( 'g:i a', strtotime( get_post_meta( get_the_ID(), 'event_metatime_end', true ) ) ) ); ?>
                                 </span>
 
                                 <br>
@@ -106,7 +106,7 @@
                     <?php if ( get_post_meta( get_the_ID(), 'event_more', true ) ) : ?>
                     
                         <div class="">
-                            <a class="apply secondary-button" target="_BLANK" href="<?php echo esc_url( get_post_meta( get_the_ID(), 'event_more', true ) ); ?>">Learn More</a>
+                            <a class="apply secondary-button" target="_BLANK" href="<?php echo esc_url( get_post_meta( get_the_ID(), 'event_more', true ) ); ?>"><?php echo __('Learn More', 'zeal' ); ?></a>
                         </div>                               
 
                     <?php endif; ?>
@@ -115,21 +115,21 @@
                 
             </div>
             
-            <div class="col-sm-<?php echo $col_2_width; ?> single-post-right">
+            <div class="col-sm-<?php echo esc_attr( $col_2_width ); ?> single-post-right">
                 
                 <header class="entry-header">
-                    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                    <?php esc_html( the_title( '<h1 class="entry-title">', '</h1>' ) ); ?>
                     <hr>
                     <div class="job-title-meta">
                         
-                        <?php echo get_post_meta( get_the_ID(), 'event_metalocation', true); ?>
+                        <?php echo esc_html( get_post_meta( get_the_ID(), 'event_metalocation', true ) ); ?>
                         
                     </div>
                 </header><!-- .entry-header -->
 
                 <div class="entry-content">
                     
-                    <h2 class="about-heading">Event Details</h2>
+                    <h2 class="about-heading"><?php echo __('Event Details', 'zeal' ); ?></h2>
                     
                     <?php the_content(); ?>
                     

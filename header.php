@@ -58,7 +58,7 @@
                                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html( bloginfo( 'name' ) ); ?></a>
                                 </h1>
                                 
-                                <p class="header-description <?php echo get_theme_mod( 'zeal_tagline_toggle', 'show' ) == 'show' && get_theme_mod( 'zeal_logo_or_title', 'title' ) == 'title' ? '' : 'zeal-hidden' ; ?>">
+                                <p class="header-description <?php echo get_theme_mod( 'zeal_tagline_toggle', 'show' ) == 'show' && get_theme_mod( 'zeal_logo_or_title', 'title' ) == 'title' ? esc_attr( '' ) : esc_attr( 'zeal-hidden' ); ?>">
                                     <?php esc_html( bloginfo( 'description' ) ); ?>
                                 </p>
                                 

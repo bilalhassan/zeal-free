@@ -49,7 +49,7 @@ class Zeal_Theme {
         wp_enqueue_style('zeal-slicknav', get_template_directory_uri() . '/inc/css/slicknav.min.css', array(), ZEAL_VERSION);
         wp_enqueue_style('zeal-animations', get_template_directory_uri() . '/inc/css/animate.css', array(), ZEAL_VERSION);
         wp_enqueue_style('zeal-main-style', get_template_directory_uri() . '/inc/css/style.css', array(), ZEAL_VERSION);
-        wp_enqueue_style('zeal-template', get_template_directory_uri() . '/inc/css/temps/' . esc_attr( get_theme_mod( 'zeal_theme_color', 'teal' ) ) . '.min.css', array(), ZEAL_VERSION);
+        wp_enqueue_style('zeal-template', get_template_directory_uri() . '/inc/css/temps/' . get_theme_mod( 'zeal_theme_color', 'teal' ) . '.min.css', array(), ZEAL_VERSION);
 
         wp_enqueue_script('zeal-slicknav-js', get_template_directory_uri() . '/inc/js/jquery.slicknav.min.js', array('jquery'), ZEAL_VERSION, true);
         wp_enqueue_script('zeal-wow', get_template_directory_uri() . '/inc/js/wow.min.js', array('jquery'), ZEAL_VERSION, true);
@@ -285,7 +285,7 @@ function zeal_homepage_posts() { ?>
     <?php if( get_theme_mod( 'zeal_the_featured_post_bool', 'on' ) == 'on' ) : ?>
     <section class="featured-homepage-post">
 
-        <?php $featured_post = get_theme_mod( 'zeal_the_featured_post', null ) == null ? null : get_post( esc_attr( get_theme_mod( 'zeal_the_featured_post', null ) ) ); ?>
+        <?php $featured_post = get_theme_mod( 'zeal_the_featured_post', null ) == null ? null : get_post( get_theme_mod( 'zeal_the_featured_post', null ) ); ?>
 
         <?php
             if ( ! is_null( $featured_post ) && has_post_thumbnail( $featured_post->ID ) ) :
@@ -329,7 +329,7 @@ function zeal_homepage_posts() { ?>
     <?php if( get_theme_mod( 'zeal_the_featured_post2_bool', 'on' ) == 'on' ) : ?>
     <section class="featured-homepage-post">
 
-        <?php $featured_post = get_theme_mod( 'zeal_the_featured_post2', null ) == null ? null : get_post( esc_attr( get_theme_mod( 'zeal_the_featured_post2', null ) ) ); ?>
+        <?php $featured_post = get_theme_mod( 'zeal_the_featured_post2', null ) == null ? null : get_post( get_theme_mod( 'zeal_the_featured_post2', null ) ); ?>
 
         <?php
             if ( ! is_null( $featured_post ) && has_post_thumbnail( $featured_post->ID ) ) :
@@ -573,11 +573,11 @@ function zeal_jumbotron_text () { ?>
 
     <div class="big-hero-buttons wow fadeInUp">
         
-        <?php if( get_theme_mod( 'zeal_hero_button_1_text', 'View Demo' ) ) : ?>
-        <a href="<?php if ( get_theme_mod( 'zeal_hero_button_1_url' ) ) : ?>
+        <?php if( get_theme_mod( 'zeal_hero_button_1_text', __( 'View Demo', 'zeal' ) ) ) : ?>
+        <a href="<?php if ( get_theme_mod( 'zeal_hero_button_1_url', null ) ) : ?>
                 <?php echo esc_url( get_permalink( get_theme_mod( 'zeal_hero_button_1_internal', '#' ) ) ); ?>
             <?php else : ?>
-                <?php echo esc_url( get_theme_mod( 'zeal_hero_button_1_url', '#' ) ); ?>
+                <?php echo esc_url( get_theme_mod( 'zeal_hero_button_1_url', null ) ); ?>
             <?php endif; ?>">
             
             <button class="hero-button-1 dark-btn">
@@ -587,11 +587,11 @@ function zeal_jumbotron_text () { ?>
         </a>
         <?php endif; ?>
 
-        <?php if( get_theme_mod( 'zeal_hero_button_2_text', __( 'View Portfolio', 'zeal' )  ) ) : ?>
-        <a href="<?php if ( get_theme_mod( 'zeal_hero_button_2_url' ) ) : ?>
+        <?php if( get_theme_mod( 'zeal_hero_button_2_text', __( 'View Portfolio', 'zeal' ) ) ) : ?>
+        <a href="<?php if ( get_theme_mod( 'zeal_hero_button_2_url', null ) ) : ?>
                 <?php echo esc_url( get_permalink( get_theme_mod( 'zeal_hero_button_2_internal', '#' ) ) ); ?>
             <?php else : ?>
-                <?php echo esc_url( get_theme_mod( 'zeal_hero_button_2_url', '#' ) ); ?>
+                <?php echo esc_url( get_theme_mod( 'zeal_hero_button_2_url', null ) ); ?>
             <?php endif; ?>">
             <button class="hero-button-2 dark-btn">
                 <?php echo esc_html( get_theme_mod( 'zeal_hero_button_2_text', __( 'View Portfolio', 'zeal' )  ) ); ?>

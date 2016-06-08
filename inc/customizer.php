@@ -17,14 +17,8 @@ add_action( 'customize_controls_enqueue_scripts', 'zeal_enqueue_customizer_style
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 
-function zeal_customize_register_alt( $wp_customize ) {
-    $wp_customize->remove_section( 'static_front_page' );
-    $wp_customize->remove_section( 'title_tagline' );    
-}
-
 function zeal_customize_register( $wp_customize ) {
     
-//        delete_option('theme_mods_zeal');
     
         // Resets
         $wp_customize->remove_section( 'static_front_page' );
@@ -59,12 +53,9 @@ function zeal_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
         
 }
-if( zeal_strap_pl() ) :
-    add_action( 'customize_register', 'zeal_customize_register' );
-    
-else :
-    add_action( 'customize_register', 'zeal_customize_register_alt' );
-endif;
+
+add_action( 'customize_register', 'zeal_customize_register' );
+
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
@@ -120,16 +111,6 @@ function zeal_fonts() {
     return $font_family_array;
 }
 
-
-function zeal_strap_pl() {
-    
-    if (get_option( 'zeal-pro_license_key_status', false) == 'valid') :
-        
-        return true;
-    endif;
-
-    return false;
-}
 
 function zeal_sanitize( $input ) {
     return $input;

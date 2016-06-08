@@ -21,8 +21,8 @@ get_header(); ?>
 
                             <header class="page-header">
                                 <h1 class="page-title">
-                                    Archive:
-                                    <span><?php the_archive_title(); ?></span>
+                                    <?php echo __( 'Archive:', 'zeal' ); ?>
+                                    <span><?php esc_html( the_archive_title() ); ?></span>
                                 </h1>
                             </header><!-- .page-header -->
 

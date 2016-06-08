@@ -28,7 +28,7 @@ get_header(); ?>
 
                             <h2 class="wow fadeInDown feature-content-title">
 
-                                <?php echo esc_attr(get_theme_mod('zeal_portfolio_section_name', __('Blog', 'zeal'))); ?>
+                                <?php echo esc_html( get_theme_mod( 'zeal_portfolio_section_name', __( 'Blog', 'zeal' ) ) ); ?>
 
                             </h2>
 

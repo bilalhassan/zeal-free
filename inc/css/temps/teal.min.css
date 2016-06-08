@@ -36,7 +36,8 @@ div.archive-page article a,
 ul#zeal-testimonials .testimonial-content .fa.fa-quote-left,
 ul#zeal-testimonials .testimonial-author,
 .single-faq .faq-title,
-.zeal-contact-info span.fa
+.zeal-contact-info span.fa,
+nav.comment-navigation a
 {
     color: #3eb3b1;
 }

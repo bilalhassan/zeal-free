@@ -49,7 +49,7 @@ class Zeal_Theme {
         wp_enqueue_style('zeal-slicknav', get_template_directory_uri() . '/inc/css/slicknav.min.css', array(), ZEAL_VERSION);
         wp_enqueue_style('zeal-animations', get_template_directory_uri() . '/inc/css/animate.css', array(), ZEAL_VERSION);
         wp_enqueue_style('zeal-main-style', get_template_directory_uri() . '/inc/css/style.css', array(), ZEAL_VERSION);
-        wp_enqueue_style('zeal-template', get_template_directory_uri() . '/inc/css/temps/' . esc_attr( get_theme_mod( 'zeal_theme_color', 'teal' ) ) . '.min.css', array(), ZEAL_VERSION);
+        wp_enqueue_style('zeal-template', get_template_directory_uri() . '/inc/css/temps/' . get_theme_mod( 'zeal_theme_color', 'teal' ) . '.min.css', array(), ZEAL_VERSION);
 
         wp_enqueue_script('zeal-slicknav-js', get_template_directory_uri() . '/inc/js/jquery.slicknav.min.js', array('jquery'), ZEAL_VERSION, true);
         wp_enqueue_script('zeal-wow', get_template_directory_uri() . '/inc/js/wow.min.js', array('jquery'), ZEAL_VERSION, true);
@@ -109,7 +109,7 @@ class Zeal_Theme {
         <?php else : ?>
 
         body{
-            background: <?php echo get_theme_mod( 'zeal_bg_color', '#414141' ); ?>;
+            background: <?php echo esc_attr( get_theme_mod( 'zeal_bg_color', '#414141' ) ); ?>;
         }
 
         <?php endif; ?>
@@ -127,20 +127,20 @@ class Zeal_Theme {
         }
 
         .camera_target_content {
-            background-color: <?php echo get_theme_mod( 'zeal_hero_tint_toggle', 'on' ) == 'on' ? esc_attr( get_theme_mod( 'zeal_hero_tint', 'rgba(10, 10, 10, 0.25)' ) ) : 'none'; ?>
+            background-color: <?php echo get_theme_mod( 'zeal_hero_tint_toggle', 'on' ) == 'on' ? esc_attr( get_theme_mod( 'zeal_hero_tint', 'rgba(10, 10, 10, 0.25)' ) ) : esc_attr( 'none' ); ?>
         }
 
         div.big-hero-buttons button{
-            font-size: <?php echo get_theme_mod( 'zeal_jumbo_button_size', 10 ); ?>px;
+            font-size: <?php echo esc_attr( get_theme_mod( 'zeal_jumbo_button_size', 10 ) ); ?>px;
             color: <?php echo esc_attr( get_theme_mod( 'zeal_jumbo_text_color', '#ffffff' ) ); ?>
         }
 
         .blog-post-overlay h2.post-title{
-            font-size: <?php echo get_theme_mod('zeal_blog_title_size', 24 ); ?>px;
+            font-size: <?php echo esc_attr( get_theme_mod('zeal_blog_title_size', 24 ) ); ?>px;
         }
 
         .blog-post-overlay .blog-post-read-more {
-            font-size: <?php echo get_theme_mod('zeal_blog_link_size', 10 ); ?>px;
+            font-size: <?php echo esc_attr( get_theme_mod('zeal_blog_link_size', 10 ) ); ?>px;
         }
 
     <?php if ( get_theme_mod( 'zeal_cta_a_image' ) ) : ?>
@@ -220,27 +220,27 @@ class Zeal_Theme {
             ul#zeal-testimonials .testimonial-author,
             .zeal-pricing-table .title,
             .zeal-pricing-table .subtitle{
-                font-family: <?php echo get_theme_mod( 'zeal_font_primary', 'Oswald, sans-serif' ); ?>;
+                font-family: <?php echo esc_attr( get_theme_mod( 'zeal_font_primary', 'Oswald, sans-serif' ) ); ?>;
             }
 
             body,
             section.homepage-cta-banner div.cta-banner-content,
             div.archive-page h1 span,
             .event-blog .event-post .event-details .secondary-button{
-                font-family: <?php echo get_theme_mod( 'zeal_font_secondary', 'Titillium Web, sans-serif' ); ?>;
+                font-family: <?php echo esc_attr( get_theme_mod( 'zeal_font_secondary', 'Titillium Web, sans-serif' ) ); ?>;
             }
 
             nav.main-nav a{
-                font-size: <?php echo get_theme_mod( 'zeal_menu_font_size', 10 ); ?>px;
+                font-size: <?php echo esc_attr( get_theme_mod( 'zeal_menu_font_size', 10 ) ); ?>px;
             }
 
             body {
-                font-size: <?php echo get_theme_mod( 'zeal_body_font_size', 14 ); ?>px;
+                font-size: <?php echo esc_attr( get_theme_mod( 'zeal_body_font_size', 14 ) ); ?>px;
             }
 
             section.front-page-hero,
             div.col-md-12.hero-banner{
-                height: <?php echo get_theme_mod( 'zeal_slider_height', 450 ); ?>px;
+                height: <?php echo esc_attr( get_theme_mod( 'zeal_slider_height', 450 ) ); ?>px;
             }
         
     </style>
@@ -260,11 +260,11 @@ function zeal_jumbotron() { ?>
         <?php else : ?>
 
 
-            <div data-stellar-background-ratio="0.5" class="zeal-parallax col-md-12 hero-banner <?php echo get_theme_mod( 'zeal_hero_background_style', 'image' ) == 'color' ? 'zeal-bg-img-none' : ''; ?>"
-                style="background-color: <?php echo esc_url( get_theme_mod( 'zeal_hero_bg_color', '#0D0D0D' ) ); ?>;
+            <div data-stellar-background-ratio="0.5" class="zeal-parallax col-md-12 hero-banner <?php echo get_theme_mod( 'zeal_hero_background_style', 'image' ) == 'color' ? esc_attr( 'zeal-bg-img-none' ) : esc_attr( '' ); ?>"
+                style="background-color: <?php echo esc_attr( get_theme_mod( 'zeal_hero_bg_color', '#0D0D0D' ) ); ?>;
                     background-image: url(<?php echo esc_url( get_theme_mod( 'zeal_hero_image', get_template_directory_uri() . '/inc/images/zeal-demo.jpg' ) ); ?>)">
 
-                <div class="hero-overlay" style="background-color: <?php echo get_theme_mod( 'zeal_hero_tint_toggle', 'on' ) == 'on' ? esc_attr( get_theme_mod( 'zeal_hero_tint', 'rgba(10, 10, 10, 0.25)' ) ) : 'none'; ?>">
+                <div class="hero-overlay" style="background-color: <?php echo get_theme_mod( 'zeal_hero_tint_toggle', 'on' ) == 'on' ? esc_attr( get_theme_mod( 'zeal_hero_tint', 'rgba(10, 10, 10, 0.25)' ) ) : esc_attr( 'none' ); ?>">
 
                     <?php zeal_jumbotron_text(); ?>
 
@@ -285,7 +285,7 @@ function zeal_homepage_posts() { ?>
     <?php if( get_theme_mod( 'zeal_the_featured_post_bool', 'on' ) == 'on' ) : ?>
     <section class="featured-homepage-post">
 
-        <?php $featured_post = get_theme_mod( 'zeal_the_featured_post', null ) == null ? null : get_post( esc_attr( get_theme_mod( 'zeal_the_featured_post', null ) ) ); ?>
+        <?php $featured_post = get_theme_mod( 'zeal_the_featured_post', null ) == null ? null : get_post( get_theme_mod( 'zeal_the_featured_post', null ) ); ?>
 
         <?php
             if ( ! is_null( $featured_post ) && has_post_thumbnail( $featured_post->ID ) ) :
@@ -295,26 +295,26 @@ function zeal_homepage_posts() { ?>
             endif;
         ?>
 
-        <a href="<?php echo is_null( $featured_post ) ? '#' : get_permalink( $featured_post->ID ); ?>">
-            <div class="col-sm-6 featured-post-image" style="background-image: url(<?php echo $image; ?>);">
+        <a href="<?php echo is_null( $featured_post ) ? esc_attr( '#' ) : esc_url( get_permalink( $featured_post->ID ) ); ?>">
+            <div class="col-sm-6 featured-post-image" style="background-image: url(<?php echo esc_url( $image ); ?>);">
             </div>
         </a>
 
         <div class="col-sm-6 featured-post-content">
 
-            <h2 class="wow fadeInUp"><?php echo is_null( $featured_post ) ? __( 'Select a Featured Post to Have it Displayed Here', 'zeal' ) : $featured_post->post_title; ?></h2>
+            <h2 class="wow fadeInUp"><?php echo is_null( $featured_post ) ? esc_html__( 'Select a Featured Post to Have it Displayed Here', 'zeal' ) : esc_html( $featured_post->post_title ); ?></h2>
 
             <div class="wow fadeInUp">
-                <?php echo is_null( $featured_post ) ? __( 'You may use the built in WordPress Customizer to modify which post appears here.', 'zeal' ) : apply_filters( 'the_content', $featured_post->post_content ); ?>
+                <?php echo is_null( $featured_post ) ? esc_html__( 'You may use the built in WordPress Customizer to modify which post appears here.', 'zeal' ) : esc_html( apply_filters( 'the_content', $featured_post->post_content ) ); ?>
             </div>
 
             <div class="featured-post-overlay">
             </div>    
 
-            <a href="<?php echo is_null( $featured_post ) ? '#' : get_permalink( $featured_post->ID ); ?>">
+            <a href="<?php echo is_null( $featured_post ) ? esc_url( '#' ) : esc_url( get_permalink( $featured_post->ID ) ); ?>">
                 <div class="click-through-arrow">
 
-                    <h4 class="wow fadeIn"><?php echo get_theme_mod('zeal_the_featured_post_button', 'Read More ...' ); ?></h4>
+                    <h4 class="wow fadeIn"><?php echo esc_html( get_theme_mod( 'zeal_the_featured_post_button', __( 'Read More ...', 'zeal' ) ) ); ?></h4>
 
                 </div>
             </a>
@@ -329,7 +329,7 @@ function zeal_homepage_posts() { ?>
     <?php if( get_theme_mod( 'zeal_the_featured_post2_bool', 'on' ) == 'on' ) : ?>
     <section class="featured-homepage-post">
 
-        <?php $featured_post = get_theme_mod( 'zeal_the_featured_post2', null ) == null ? null : get_post( esc_attr( get_theme_mod( 'zeal_the_featured_post2', null ) ) ); ?>
+        <?php $featured_post = get_theme_mod( 'zeal_the_featured_post2', null ) == null ? null : get_post( get_theme_mod( 'zeal_the_featured_post2', null ) ); ?>
 
         <?php
             if ( ! is_null( $featured_post ) && has_post_thumbnail( $featured_post->ID ) ) :
@@ -339,31 +339,29 @@ function zeal_homepage_posts() { ?>
             endif;
         ?>
 
-
-
         <div class="col-sm-6 featured-post-content">
 
-            <h2 class="wow fadeInUp"><?php echo is_null( $featured_post ) ? __( 'Select a Featured Post to Have it Displayed Here', 'zeal' ) : $featured_post->post_title; ?></h2>
+            <h2 class="wow fadeInUp"><?php echo is_null( $featured_post ) ? esc_html__( 'Select a Featured Post to Have it Displayed Here', 'zeal' ) : esc_html( $featured_post->post_title ); ?></h2>
 
             <div class="wow fadeInUp">
-                <?php echo is_null( $featured_post ) ? __( 'You may use the built in WordPress Customizer to modify which post appears here.', 'zeal' ) : apply_filters( 'the_content', $featured_post->post_content ); ?>
+                <?php echo is_null( $featured_post ) ? esc_html__( 'You may use the built in WordPress Customizer to modify which post appears here.', 'zeal' ) : esc_html( apply_filters( 'the_content', $featured_post->post_content ) ); ?>
             </div>
 
             <div class="featured-post-overlay">
             </div>    
 
-            <a href="<?php echo is_null( $featured_post ) ? '#' : get_permalink( $featured_post->ID ); ?>">
+            <a href="<?php echo is_null( $featured_post ) ? esc_url( '#' ) : esc_url( get_permalink( $featured_post->ID ) ); ?>">
                 <div class="click-through-arrow">
 
-                    <h4 class="wow fadeIn"><?php echo get_theme_mod('zeal_the_featured_post2_button', 'Read More ...' ); ?></h4>
+                    <h4 class="wow fadeIn"><?php echo esc_html( get_theme_mod('zeal_the_featured_post2_button', __( 'Read More ...', 'zeal' ) ) ); ?></h4>
 
                 </div>
             </a>
 
         </div>
 
-        <a href="<?php echo is_null( $featured_post ) ? '#' : get_permalink( $featured_post->ID ); ?>">
-            <div class="col-sm-6 featured-post-image" style="background-image: url(<?php echo $image; ?>);">
+        <a href="<?php echo is_null( $featured_post ) ? esc_url( '#' ) : esc_url( get_permalink( $featured_post->ID ) ); ?>">
+            <div class="col-sm-6 featured-post-image" style="background-image: url(<?php echo esc_url( $image ); ?>);">
             </div>
         </a>
 
@@ -489,11 +487,11 @@ function zeal_render_footer() { ?>
                 <div class="">
                     
                     <p class="footer" style="display: block !important">
-                        <?php _e( 'Designed by Smartcat', 'zeal' ); ?> <img src="<?php echo get_template_directory_uri() . "/inc/images/smartcat-30x33.png"; ?>" alt="Smartcat">
+                        <?php _e( 'Designed by Smartcat', 'zeal' ); ?> <img src="<?php echo esc_url( get_template_directory_uri() . "/inc/images/smartcat-30x33.png" ); ?>" alt="Smartcat">
                     </p>
                     
                     <p class="footer">
-                        <?php echo get_theme_mod( 'zeal_copyright_text', __( 'Copyright Your Company Name ', 'zeal' ) ); ?>
+                        <?php echo esc_html( get_theme_mod( 'zeal_copyright_text', __( 'Copyright Your Company Name ', 'zeal' ) ) ); ?>
                     </p>
                     
                 </div>
@@ -570,33 +568,33 @@ function hex2rgba( $color, $opacity = false ) {
 
 function zeal_jumbotron_text () { ?>
     
-    <h2 class="wow fadeInDown"><?php echo esc_attr( get_theme_mod( 'zeal_hero_heading', __( 'Zeal', 'zeal' )  ) ); ?></h2>
-    <p class="site-tagline wow fadeInUp"><?php echo esc_attr( get_theme_mod( 'zeal_hero_tagline', __( 'Designed by Smartcat', 'zeal' )  ) ); ?></p>
+    <h2 class="wow fadeInDown"><?php echo esc_html( get_theme_mod( 'zeal_hero_heading', __( 'Zeal', 'zeal' ) ) ); ?></h2>
+    <p class="site-tagline wow fadeInUp"><?php echo esc_html( get_theme_mod( 'zeal_hero_tagline', __( 'Designed by Smartcat', 'zeal' ) ) ); ?></p>
 
     <div class="big-hero-buttons wow fadeInUp">
         
-        <?php if( get_theme_mod( 'zeal_hero_button_1_text', 'View Demo' ) ) : ?>
-        <a href="<?php if ( get_theme_mod( 'zeal_hero_button_1_url' ) ) : ?>
-                <?php echo get_permalink( esc_attr( get_theme_mod( 'zeal_hero_button_1_internal', '#' ) ) ); ?>
+        <?php if( get_theme_mod( 'zeal_hero_button_1_text', __( 'View Demo', 'zeal' ) ) ) : ?>
+        <a href="<?php if ( get_theme_mod( 'zeal_hero_button_1_url', null ) ) : ?>
+                <?php echo esc_url( get_permalink( get_theme_mod( 'zeal_hero_button_1_internal', '#' ) ) ); ?>
             <?php else : ?>
-                <?php echo esc_url( get_theme_mod( 'zeal_hero_button_1_url', '#' ) ); ?>
+                <?php echo esc_url( get_theme_mod( 'zeal_hero_button_1_url', null ) ); ?>
             <?php endif; ?>">
             
             <button class="hero-button-1 dark-btn">
-                <?php echo esc_attr( get_theme_mod( 'zeal_hero_button_1_text', __( 'View Demo', 'zeal' )  ) ); ?>
+                <?php echo esc_html( get_theme_mod( 'zeal_hero_button_1_text', __( 'View Demo', 'zeal' )  ) ); ?>
             </button>
             
         </a>
         <?php endif; ?>
 
-        <?php if( get_theme_mod( 'zeal_hero_button_2_text', __( 'View Portfolio', 'zeal' )  ) ) : ?>
-        <a href="<?php if ( get_theme_mod( 'zeal_hero_button_2_url' ) ) : ?>
-                <?php echo get_permalink( esc_attr( get_theme_mod( 'zeal_hero_button_2_internal', '#' ) ) ); ?>
+        <?php if( get_theme_mod( 'zeal_hero_button_2_text', __( 'View Portfolio', 'zeal' ) ) ) : ?>
+        <a href="<?php if ( get_theme_mod( 'zeal_hero_button_2_url', null ) ) : ?>
+                <?php echo esc_url( get_permalink( get_theme_mod( 'zeal_hero_button_2_internal', '#' ) ) ); ?>
             <?php else : ?>
-                <?php echo esc_url( get_theme_mod( 'zeal_hero_button_2_url', '#' ) ); ?>
+                <?php echo esc_url( get_theme_mod( 'zeal_hero_button_2_url', null ) ); ?>
             <?php endif; ?>">
             <button class="hero-button-2 dark-btn">
-                <?php echo esc_attr( get_theme_mod( 'zeal_hero_button_2_text', __( 'View Portfolio', 'zeal' )  ) ); ?>
+                <?php echo esc_html( get_theme_mod( 'zeal_hero_button_2_text', __( 'View Portfolio', 'zeal' )  ) ); ?>
             </button>
         </a>
         <?php endif; ?>

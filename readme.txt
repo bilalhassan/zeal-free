@@ -1,7 +1,7 @@
 === Zeal ===
 
 Contributors: automattic
-Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
+Tags: full-width-template, threaded-comments, left-sidebar, featured-images, right-sidebar, one-column, two-columns, three-columns, custom-colors, featured-image-header, front-page-post-form, theme-options, translation-ready
 
 Requires at least: 4.0
 Tested up to: 4.3.1

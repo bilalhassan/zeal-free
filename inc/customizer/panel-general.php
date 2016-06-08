@@ -22,7 +22,7 @@ $wp_customize->add_section( 'header', array(
 
     // Use Logo or Title
     $wp_customize->add_setting( 'zeal_logo_or_title', array (
-        'default'               => 'logo',
+        'default'               => 'title',
         'transport'             => 'refresh',
         'sanitize_callback'     => 'zeal_sanitize_logo_or_title_switch',
     ) );

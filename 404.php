@@ -21,13 +21,11 @@ get_header();
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
                         <span class="fa fa-exclamation-triangle"></span>
-                        <?php echo get_theme_mod( 'zeal_404_content', __( 'Sorry, the page youre looking for is not available', 'zeal' ) ); ?>
+                        <?php echo esc_html( get_theme_mod( 'zeal_404_content', __( 'Sorry, the page youre looking for is not available', 'zeal' ) ) ); ?>
                         
-
                     </article><!-- #post-## -->
 
                 </div>
-
 
             </div>
 

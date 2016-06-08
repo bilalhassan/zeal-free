@@ -872,6 +872,11 @@ div#comments-header-bar {
     padding: 50px;
 }
 
+nav.comment-navigation {
+    padding: 40px;
+    margin: 0 !important;
+}
+
 div#comments-header-bar h3 {
     color: #fff;
     margin: 0;
@@ -1064,6 +1069,44 @@ p.footer img {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+aside.widget .calendar_wrap {
+    padding: 15px;
+}
+
+aside.widget table {
+    border-collapse: separate;
+}
+
+aside.widget table caption {
+    font-size: 16px;
+}
+
+aside.widget table th,
+aside.widget table td {
+    border: thin solid #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+aside.widget table th {
+    color: #fff;
+    padding: 10px;
+}
+
+aside.widget table td {
+    padding: 5px 2px;
+}
+
+aside.widget table tfoot td {
+    border: none;
+    border-top: thin solid #fff;
+    font-size: 16px;
+}
+
+.widget caption {
+    color: #fff;
 }
 
 /* ---------------------------------------- */

@@ -44,9 +44,9 @@
         
         <div class="row">
         
-            <div class="col-sm-<?php echo $col_1_width; ?> single-post-left">
+            <div class="col-sm-<?php echo esc_attr( $col_1_width ); ?> single-post-left">
                 
-                <a href="<?php echo has_post_thumbnail( get_the_ID() ) ? $image[0] : $image; ?>" data-lightbox="<?php the_title(); ?>">
+                <a href="<?php echo has_post_thumbnail( get_the_ID() ) ? esc_url( $image[0] ) : esc_url( $image ); ?>" data-lightbox="<?php esc_attr( the_title() ); ?>">
                     
                     <?php
                         if( has_post_thumbnail( get_the_ID() ) ) : 
@@ -65,14 +65,14 @@
                     <?php if( get_theme_mod( 'zeal_single_author', 'on' ) == 'on' ) : ?>
                     
                     <span class="meta-heading"><?php _e( "AUTHOR :", 'zeal'); ?></span>
-                    <span class="meta-value"><?php the_author_posts_link(); ?></span>
+                    <span class="meta-value"><?php esc_html( the_author_posts_link() ); ?></span>
                     
                     <br>
                     <?php endif; ?>
                     
                     <?php if( get_theme_mod( 'zeal_single_date', 'on' ) == 'on' ) : ?>
                     <span class="meta-heading"><?php _e( "DATE POSTED :", 'zeal'); ?></span>
-                    <span class="meta-value"><?php echo get_the_date(); ?></span>
+                    <span class="meta-value"><?php echo esc_html( get_the_date() ); ?></span>
                     
                     <br>
                     <?php endif; ?>
@@ -83,8 +83,8 @@
                     <span class="meta-value">
                         <?php $categories = get_the_category(); ?>
                         <?php foreach ( $categories as $cat ) : ?>
-                            <a href="<?php echo get_category_link( $cat ); ?>">
-                                <span class="meta-taxonomy"><?php echo $cat->name; ?></span>
+                            <a href="<?php echo esc_url( get_category_link( $cat ) ); ?>">
+                                <span class="meta-taxonomy"><?php echo esc_html( $cat->name ); ?></span>
                             </a>
                         <?php endforeach; ?>
                     </span>
@@ -97,8 +97,8 @@
                             <span class="meta-value">
                                 <?php $tags = get_the_tags(); ?>
                                 <?php foreach ( $tags as $tag ) : ?>
-                                    <a href="<?php echo get_tag_link( $tag ); ?>">
-                                        <span class="meta-taxonomy"><?php echo $tag->name; ?></span>
+                                    <a href="<?php echo esc_url( get_tag_link( $tag ) ); ?>">
+                                        <span class="meta-taxonomy"><?php echo esc_html( $tag->name ); ?></span>
                                     </a>
                                 <?php endforeach; ?>
                             </span>
@@ -109,7 +109,7 @@
                 
             </div>
             
-            <div class="col-sm-<?php echo $col_2_width; ?> single-post-right">
+            <div class="col-sm-<?php echo esc_attr( $col_2_width ); ?> single-post-right">
                 
                 <header class="entry-header">
                     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

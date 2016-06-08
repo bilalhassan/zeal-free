@@ -872,6 +872,11 @@ div#comments-header-bar {
     padding: 50px;
 }
 
+nav.comment-navigation {
+    padding: 40px;
+    margin: 0 !important;
+}
+
 div#comments-header-bar h3 {
     color: #fff;
     margin: 0;
@@ -1088,12 +1093,10 @@ aside.widget table td {
 aside.widget table th {
     color: #fff;
     padding: 10px;
-/*    background-color: #3EB3B1;*/
 }
 
 aside.widget table td {
     padding: 5px 2px;
-/*    background-color: #f5f5f5;*/
 }
 
 aside.widget table tfoot td {

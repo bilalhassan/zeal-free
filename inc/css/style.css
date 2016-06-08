@@ -1066,6 +1066,46 @@ p.footer img {
     list-style: none;
 }
 
+aside.widget .calendar_wrap {
+    padding: 15px;
+}
+
+aside.widget table {
+    border-collapse: separate;
+}
+
+aside.widget table caption {
+    font-size: 16px;
+}
+
+aside.widget table th,
+aside.widget table td {
+    border: thin solid #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+aside.widget table th {
+    color: #fff;
+    padding: 10px;
+/*    background-color: #3EB3B1;*/
+}
+
+aside.widget table td {
+    padding: 5px 2px;
+/*    background-color: #f5f5f5;*/
+}
+
+aside.widget table tfoot td {
+    border: none;
+    border-top: thin solid #fff;
+    font-size: 16px;
+}
+
+.widget caption {
+    color: #fff;
+}
+
 /* ---------------------------------------- */
 /* SEARCH AND TAG TEMPLATE                  */
 /* ---------------------------------------- */

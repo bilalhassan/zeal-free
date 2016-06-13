@@ -244,7 +244,7 @@ $wp_customize->add_control( 'zeal_slider_height', array(
     // Hero Banner Button 1 External URL
     $wp_customize->add_setting( 'zeal_hero_button_1_url', array (
         'default'               => null,
-        'transport'             => 'postMessage',
+        'transport'             => 'refresh',
         'sanitize_callback'     => 'esc_url_raw',
     ) );
     $wp_customize->add_control( 'zeal_hero_button_1_url', array(
@@ -282,7 +282,7 @@ $wp_customize->add_control( 'zeal_slider_height', array(
     // Hero Banner Button 2 External URL
     $wp_customize->add_setting( 'zeal_hero_button_2_url', array (
         'default'               => null,
-        'transport'             => 'postMessage',
+        'transport'             => 'refresh',
         'sanitize_callback'     => 'esc_url_raw',
     ) );
     $wp_customize->add_control( 'zeal_hero_button_2_url', array(

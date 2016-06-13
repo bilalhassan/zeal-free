@@ -580,11 +580,10 @@ function zeal_jumbotron_text () { ?>
         
         <?php if( get_theme_mod( 'zeal_hero_button_1_text', __( 'View Demo', 'zeal' ) ) ) : ?>
         <a href="<?php if ( get_theme_mod( 'zeal_hero_button_1_url', null ) ) : ?>
-                <?php echo esc_url( get_permalink( get_theme_mod( 'zeal_hero_button_1_internal', '#' ) ) ); ?>
-            <?php else : ?>
                 <?php echo esc_url( get_theme_mod( 'zeal_hero_button_1_url', null ) ); ?>
+            <?php else : ?>
+                <?php echo esc_url( get_permalink( get_theme_mod( 'zeal_hero_button_1_internal', '#' ) ) ); ?>
             <?php endif; ?>">
-            
             <button class="hero-button-1 dark-btn">
                 <?php echo esc_html( get_theme_mod( 'zeal_hero_button_1_text', __( 'View Demo', 'zeal' )  ) ); ?>
             </button>
@@ -594,9 +593,9 @@ function zeal_jumbotron_text () { ?>
 
         <?php if( get_theme_mod( 'zeal_hero_button_2_text', __( 'View Portfolio', 'zeal' ) ) ) : ?>
         <a href="<?php if ( get_theme_mod( 'zeal_hero_button_2_url', null ) ) : ?>
-                <?php echo esc_url( get_permalink( get_theme_mod( 'zeal_hero_button_2_internal', '#' ) ) ); ?>
+            <?php echo esc_url( get_theme_mod( 'zeal_hero_button_2_url', null ) ); ?>
             <?php else : ?>
-                <?php echo esc_url( get_theme_mod( 'zeal_hero_button_2_url', null ) ); ?>
+                <?php echo esc_url( get_permalink( get_theme_mod( 'zeal_hero_button_2_internal', '#' ) ) ); ?>
             <?php endif; ?>">
             <button class="hero-button-2 dark-btn">
                 <?php echo esc_html( get_theme_mod( 'zeal_hero_button_2_text', __( 'View Portfolio', 'zeal' )  ) ); ?>

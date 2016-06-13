@@ -1,11 +1,11 @@
 === Zeal ===
 
-Contributors: automattic
-Tags: full-width-template, threaded-comments, left-sidebar, featured-images, right-sidebar, one-column, two-columns, three-columns, custom-colors, featured-image-header, front-page-post-form, theme-options, translation-ready
+Contributors: smartcat,automattic
+Tags: blog, photography, portfolio, grid-layout, footer-widgets, threaded-comments, featured-images, one-column, two-columns, three-columns, featured-image-header, theme-options, translation-ready
 
-Requires at least: 4.0
-Tested up to: 4.3.1
-Stable tag: 1.0.0
+Requires at least: 4.5
+Tested up to: 4.5.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,14 @@ Zeal includes support for Infinite Scroll in Jetpack.
 
 = 1.0.1 - April 1, 2016 =
 * Many enhancements
+
+= 1.0.2 - June 8, 2016 =
+* Fixes for theme review
+
+= 1.0.3 - June 8, 2016 =
+* Removed a non-working theme mod
+
+= 1.0.4 - June 13, 2016 =
 
 == Credits ==
 
@@ -101,6 +109,11 @@ Zeal includes support for Infinite Scroll in Jetpack.
     - License               CC0
     - License URL           http://creativecommons.org/publicdomain/zero/1.0/deed.en
 
+13. Icons & Images
+    - Files                 blog-post-default-bg.jpg,cat_logo_mini.png, close.png, read-more-tag.png, smartcat-55x50.png, binding_dark.png, zeal-logo.png
+    - URL                   Personal images created by Smartcat
+    - License               CC0
+    - License URL           http://creativecommons.org/publicdomain/zero/1.0/deed.en
 
 
 

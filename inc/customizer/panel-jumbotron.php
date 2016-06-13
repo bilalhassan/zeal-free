@@ -66,7 +66,7 @@ $wp_customize->add_control( 'zeal_hero_tint_toggle', array(
 
 // Hero Overlay Filter
 $wp_customize->add_setting( 'zeal_hero_tint', array (
-    'default'               => 'rgba(10, 10, 10, 0.25)',
+    'default'               => '76916e',
     'transport'             => 'refresh',
     'sanitize_callback'     => 'zeal_sanitize_filter_color',
 ) );

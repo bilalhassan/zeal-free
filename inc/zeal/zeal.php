@@ -105,7 +105,8 @@ class Zeal_Theme {
         body{
             background: url(<?php echo esc_url( get_theme_mod('zeal_bg_image', get_template_directory_uri() . '/inc/images/textures/binding_dark.png' ) ); ?>);
         }
-
+        
+        
         <?php else : ?>
 
         body{
@@ -113,6 +114,10 @@ class Zeal_Theme {
         }
 
         <?php endif; ?>
+        
+        div#site-branding img.custom-logo{
+            height: <?php echo esc_attr( get_theme_mod( 'zeal_logo_size', '65' ) ); ?>px;
+        }
         
         .hero-overlay h2,
         #slider-overlay h2{
@@ -302,10 +307,10 @@ function zeal_homepage_posts() { ?>
 
         <div class="col-sm-6 featured-post-content">
 
-            <h2 class="wow fadeInUp"><?php echo is_null( $featured_post ) ? esc_html__( 'Select a Featured Post to Have it Displayed Here', 'zeal' ) : esc_html( $featured_post->post_title ); ?></h2>
+            <h2 class="wow fadeInUp"><?php echo is_null( $featured_post ) ? esc_html__( 'Select a Featured Post to Have it Displayed Here', 'zeal' ) : ( $featured_post->post_title ); ?></h2>
 
             <div class="wow fadeInUp">
-                <?php echo is_null( $featured_post ) ? esc_html__( 'You may use the built in WordPress Customizer to modify which post appears here.', 'zeal' ) : esc_html( apply_filters( 'the_content', $featured_post->post_content ) ); ?>
+                <?php echo is_null( $featured_post ) ? esc_html__( 'You may use the built in WordPress Customizer to modify which post appears here.', 'zeal' ) : apply_filters( 'the_content', $featured_post->post_content ); ?>
             </div>
 
             <div class="featured-post-overlay">
@@ -341,10 +346,10 @@ function zeal_homepage_posts() { ?>
 
         <div class="col-sm-6 featured-post-content">
 
-            <h2 class="wow fadeInUp"><?php echo is_null( $featured_post ) ? esc_html__( 'Select a Featured Post to Have it Displayed Here', 'zeal' ) : esc_html( $featured_post->post_title ); ?></h2>
+            <h2 class="wow fadeInUp"><?php echo is_null( $featured_post ) ? esc_html__( 'Select a Featured Post to Have it Displayed Here', 'zeal' ) : ( $featured_post->post_title ); ?></h2>
 
             <div class="wow fadeInUp">
-                <?php echo is_null( $featured_post ) ? esc_html__( 'You may use the built in WordPress Customizer to modify which post appears here.', 'zeal' ) : esc_html( apply_filters( 'the_content', $featured_post->post_content ) ); ?>
+                <?php echo is_null( $featured_post ) ? esc_html__( 'You may use the built in WordPress Customizer to modify which post appears here.', 'zeal' ) : ( apply_filters( 'the_content', $featured_post->post_content ) ); ?>
             </div>
 
             <div class="featured-post-overlay">

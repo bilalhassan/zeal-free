@@ -14,12 +14,12 @@
 	// Site title and description.
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
-			$( '.site-title a' ).text( to );
+			$( '.header-title a' ).text( to );
 		} );
 	} );
 	wp.customize( 'blogdescription', function( value ) {
 		value.bind( function( to ) {
-			$( '.site-description' ).text( to );
+			$( '.header-description' ).text( to );
 		} );
 	} );
 	// Header text color.
@@ -41,19 +41,7 @@
 			}
 		} );
 	} );
-         
-        
-        // ---------------------------------------------------------------------
-        // HEADER --------------------------------------------------------------
-        // ---------------------------------------------------------------------
-        
-        // Header Logo Size (Height)
-	wp.customize( 'zeal_logo_size', function( value ) {
-		value.bind( function( to ) {
-                    $( 'div#site-branding img' ).css( 'height', to );
-		} );
-	} );
-        
+
         // ---------------------------------------------------------------------
         // HERO BANNER ---------------------------------------------------------
         // ---------------------------------------------------------------------

@@ -18,7 +18,7 @@ if ( ! function_exists( 'zeal_setup' ) ) :
 function zeal_setup() {
     
         if( !defined( 'ZEAL_VERSION' ) ) :
-            define('ZEAL_VERSION', '1.0.1');
+            define('ZEAL_VERSION', '1.0.4');
         endif;
     
 	/*
@@ -46,6 +46,7 @@ function zeal_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+        add_theme_support('custom-logo');
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

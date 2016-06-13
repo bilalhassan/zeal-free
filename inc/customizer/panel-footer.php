@@ -80,19 +80,6 @@ $wp_customize->add_panel( 'zeal_branding_panel', array (
         'panel'                 => 'zeal_branding_panel'
     ) );
     
-    $wp_customize->add_setting( 'zeal_branding', array (
-        'default'               => 'on',
-        'transport'             => 'refresh',
-        'sanitize_callback'     => 'zeal_sanitize_cta_area_toggle',
-    ) );
-    $wp_customize->add_control( 'zeal_branding', array(
-        'type'                  => 'radio',
-        'section'               => 'zeal_smartcat_branding_section',
-        'label'                 => __( '"Design by Smartcat"', 'zeal' ),
-        'choices'               => array(
-            'on'            => __( 'Show', 'zeal' ),
-    ) ) );
-    
     // Hero Banner Heading Text
     $wp_customize->add_setting( 'zeal_copyright_text', array (
         'default'               => __( 'Copyright Your Company Name','zeal' ),

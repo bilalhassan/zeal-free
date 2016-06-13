@@ -28,7 +28,7 @@ $wp_customize->add_section( 'header', array(
     ) );
     $wp_customize->add_control( 'zeal_logo_or_title', array(
         'type'                  => 'radio',
-        'section'               => 'header',
+        'section'               => 'title_tagline',
         'label'                 => __( 'Use Logo or Title in Header?', 'zeal' ),
         'description'           => __( 'Specify whether you would like a logo to appear instead of the site title', 'zeal' ),
         'choices'               => array(
@@ -36,20 +36,6 @@ $wp_customize->add_section( 'header', array(
             'logo'              => __( 'Use Logo', 'zeal' ),
     ) ) );
 
-    
-    // Header Logo Image
-    $wp_customize->add_setting( 'zeal_header_logo', array (
-        'default'               => get_template_directory_uri() . '/inc/images/zeal-logo.png',
-        'transport'             => 'refresh',
-        'sanitize_callback'     => 'esc_url_raw',
-    ) );
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'zeal_header_logo', array (
-        'mime_type'             => 'image',
-        'settings'              => 'zeal_header_logo',
-        'section'               => 'header',
-        'label'                 => __( 'Logo', 'zeal' ),
-        'description'           => __( 'If you would like to use a logo instead of the site title, you may upload it here', 'zeal' ),        
-    ) ) );
     
     // Header Logo Size (Height)
     $wp_customize->add_setting( 'zeal_logo_size', array (
@@ -59,7 +45,7 @@ $wp_customize->add_section( 'header', array(
     ) );
     $wp_customize->add_control( 'zeal_logo_size', array(
         'type'                  => 'range',
-        'section'               => 'header',
+        'section'               => 'title_tagline',
         'label'                 => __( 'Logo Height', 'zeal' ),
         'description'           => __( 'Adjust the height of your logo. Aspect ratio will be maintained automatically', 'zeal' ),
         'input_attrs'           => array(
@@ -76,7 +62,7 @@ $wp_customize->add_section( 'header', array(
     ) );
     $wp_customize->add_control( 'zeal_tagline_toggle', array(
         'type'                  => 'radio',
-        'section'               => 'header',
+        'section'               => 'title_tagline',
         'label'                 => __( 'Show or Hide the Site Tagline?', 'zeal' ),
         'description'           => __( 'Specify whether the site tagline should appear below the title/logo', 'zeal' ),
         'choices'               => array(
@@ -85,7 +71,7 @@ $wp_customize->add_section( 'header', array(
     ) ) );
     
 $wp_customize->add_section( 'title_tagline', array (
-    'title' => __( 'Site Title, Tagline & Favicon', 'zeal' ),
+    'title' => __( 'Site Logo, Title, Tagline & Favicon', 'zeal' ),
     'panel' => 'general',
 ) );
 

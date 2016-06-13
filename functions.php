@@ -18,7 +18,7 @@ if ( ! function_exists( 'zeal_setup' ) ) :
 function zeal_setup() {
     
         if( !defined( 'ZEAL_VERSION' ) ) :
-            define('ZEAL_VERSION', '1.0.4');
+            define('ZEAL_VERSION', '1.0.5');
         endif;
     
 	/*

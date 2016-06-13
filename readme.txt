@@ -5,7 +5,7 @@ Tags: blog, photography, portfolio, grid-layout, footer-widgets, threaded-commen
 
 Requires at least: 4.5
 Tested up to: 4.5.2
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ Zeal includes support for Infinite Scroll in Jetpack.
 * Fixed issue with default tint color not working in customizer
 * Changed logo, now using WordPress core custom logo support
 * Remove HTML output from frontpage featured posts
+
+= 1.0.5 - June 13, 2016 =
+* Fixed issue with buttons in jumbotron not linking properly
 
 == Credits ==
 

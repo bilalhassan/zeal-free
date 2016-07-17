@@ -5,7 +5,7 @@ Tags: blog, photography, portfolio, grid-layout, footer-widgets, threaded-commen
 
 Requires at least: 4.5
 Tested up to: 4.5.3
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,9 +45,12 @@ Zeal includes support for Infinite Scroll in Jetpack.
 = 1.0.5 - June 13, 2016 =
 * Fixed issue with buttons in jumbotron not linking properly
 
-= 1.0.6 - July 17th, 2016
+= 1.0.6 - July 17th, 2016 =
 * Minor fixes for WP approval process
 * Added Team Member template for integration with Our Team Showcase
+
+= 1.0.7 - July 17th, 2016 = 
+* Display Jumbotron on Blog
 
 == Credits ==
 

@@ -55,7 +55,7 @@
                         
                         else : ?>
                     
-                            <img src="<?php echo has_post_thumbnail( get_the_ID() ) ? $image[0] : $image; ?>" alt="Featured Image" />
+                            <img src="<?php echo has_post_thumbnail( get_the_ID() ) ? $image[0] : $image; ?>" alt="<?php _e( 'Featured Image', 'zeal' ); ?>" />
                         
                     <?php endif; ?>
                     

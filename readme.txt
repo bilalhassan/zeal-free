@@ -4,8 +4,8 @@ Contributors: smartcat,automattic
 Tags: blog, photography, portfolio, grid-layout, footer-widgets, threaded-comments, featured-images, one-column, two-columns, three-columns, featured-image-header, theme-options, translation-ready
 
 Requires at least: 4.5
-Tested up to: 4.5.2
-Stable tag: 1.0.5
+Tested up to: 4.5.3
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,10 @@ Zeal includes support for Infinite Scroll in Jetpack.
 
 = 1.0.5 - June 13, 2016 =
 * Fixed issue with buttons in jumbotron not linking properly
+
+= 1.0.6 - July 17th, 2016
+* Minor fixes for WP approval process
+* Added Team Member template for integration with Our Team Showcase
 
 == Credits ==
 
@@ -121,5 +125,8 @@ Zeal includes support for Infinite Scroll in Jetpack.
     - License               CC0
     - License URL           http://creativecommons.org/publicdomain/zero/1.0/deed.en
 
-
-
+14. Screenshot Images
+    - URL                   https://pixabay.com/en/wedding-dresses-castle-bride-1486004/
+                            https://pixabay.com/en/wedding-dresses-fashion-character-1486260/
+    - License               CC0
+    - License URL           http://creativecommons.org/publicdomain/zero/1.0/deed.en

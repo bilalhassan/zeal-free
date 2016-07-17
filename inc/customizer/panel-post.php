@@ -98,30 +98,3 @@ $wp_customize->add_section( 'layout', array(
             'on'        => __( 'Show Post Tags', 'zeal' ),
             'off'       => __( 'Do not show Post Tags', 'zeal' ),
     ) ) );
-    
-    
-    // ---------------------------------------------
-    // Single Post Comments Section
-    // ---------------------------------------------
-    $wp_customize->add_section( 'comments', array(
-        'title'                 => __( 'Comments', 'zeal'),
-        'description'           => __( 'Customize the commenting options on your site', 'zeal' ),
-        'panel'                 => 'single_post'
-    ) );
-    
-    // Allow Comments Toggle
-    $wp_customize->add_setting( 'zeal_allow_comments_toggle', array (
-        'default'               => 'on',
-        'transport'             => 'refresh',
-        'sanitize_callback'     => 'zeal_sanitize_comments_toggle',
-    ) );
-    $wp_customize->add_control( 'zeal_allow_comments_toggle', array(
-        'type'                  => 'radio',
-        'section'               => 'comments',
-        'label'                 => __( 'Turn Commenting On / Off', 'zeal' ),
-        'description'           => __( 'Setting this to No Comments will also hide all existing comments. Affects all posts.', 'zeal' ),
-        'choices'               => array(
-            'on'        => __( 'Allow Comments', 'zeal' ),
-            'off'       => __( 'No Comments', 'zeal' ),
-    ) ) );
-    

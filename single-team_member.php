@@ -1,8 +1,6 @@
 <?php
 /**
- * Template Name: Zeal Front Page
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * The template for displaying single team members.
  *
  * @package Zeal
  */
@@ -10,34 +8,38 @@
 get_header(); ?>
 
     <div id="primary" class="content-area">
-
+        
         <main id="main" class="site-main" role="main">
 
-            <?php do_action('zeal_homepage'); ?>
-            
-            <div class="container single-page">
+            <div class="container">
 
                 <div class="row">
-                
+            
                     <?php while ( have_posts() ) : the_post(); ?>
 
-                            <?php get_template_part( 'template-parts/content', 'page' ); ?>
+                        <?php get_template_part( 'template-parts/content', 'team-member' ); ?>
+
+                        <?php the_post_navigation(); ?>
+
+                        <?php if ( get_theme_mod( 'zeal_allow_comments_toggle', 'on' ) == 'on' ) : ?>
 
                             <?php
                                 // If comments are open or we have at least one comment, load up the comment template.
                                 if ( comments_open() || get_comments_number() ) :
-                                        comments_template();
+                                    comments_template();
                                 endif;
                             ?>
 
+                        <?php endif; ?>
+                    
                     <?php endwhile; // End of the loop. ?>
-            
-                </div>
-            
-            </div>
+                    
+                </div><!-- row -->
+                
+            </div><!-- container -->
 
         </main><!-- #main -->
-
+        
     </div><!-- #primary -->
-
+    
 <?php get_footer(); ?>

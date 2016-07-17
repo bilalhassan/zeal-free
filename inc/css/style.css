@@ -1752,3 +1752,135 @@ section.homepage-cta-banner div.cta-banner-content .zeal-callout div.textwidget{
 section.homepage-cta-banner div.cta-banner-content .zeal-callout .zeal-button{
     margin-bottom: 20px;
 }
+
+
+/* ---------------------------------------- */
+/* SINGLE TEAM MEMBER                       */
+/* ---------------------------------------- */
+.team-member-wrapper h1.entry-title {
+    margin: 50px 0 0 0;
+    font-size: 34px;
+}
+
+.team-member-wrapper header hr {
+    border-color: #A6A6A6;
+    margin: 10px 0 8px 0;
+}
+
+.team-member-wrapper .job-title-meta {
+    font-family: 'Oswald', arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: .125em;
+}
+
+.team-member-wrapper .job-title-meta span {
+    margin: 0 10px;
+}
+
+div.team-member-wrapper div.smartcat_team_single_icons {
+    display: none;
+}
+
+div.team-member-wrapper h2.about-heading,
+div.team-member-wrapper .sc_team_posts .skills-title {
+    font-family: 'Oswald', arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+div#single-team-member-social {
+    padding: 25px;
+    text-align: center;
+}
+
+#single-team-member-social a:hover span.fa {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+#single-team-member-social span.fa {
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    width: 35px;
+    height: 35px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 22px;
+    margin: 2px;
+}
+
+.team-member-wrapper hr {
+    display: none;
+}
+
+div.team-member-wrapper .sc_team_skills span.skill-title {
+    padding: 0 10px;
+    font-family: 'Oswald', arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+div.team-member-wrapper .sc_team_skills .progress {
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+    color: #ffffff;
+    font-family: 'Oswald', arial, sans-serif;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+div.team-member-wrapper .sc-team-member-posts img {
+    display: none;
+}
+
+div.team-member-wrapper .sc-team-member-posts a {
+    font-family: 'Oswald', arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: #333333;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.team-member-wrapper .sc-tags .sc-single-tag {
+    background-color: #FFFFFF;
+    line-height: 24px;
+    padding: 0 14px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+/* ---------------------------------------- */
+/* SINGLE EVENT                             */
+/* ---------------------------------------- */
+.team-member-wrapper.news,
+.team-member-wrapper.news .single-post-meta,
+.team-member-wrapper.event,
+.team-member-wrapper.event .single-post-meta
+{
+    background-color: #0d0d0d;
+}
+
+
+.team-member-wrapper.event hr {
+    display: block;
+}
+
+.team-member-wrapper.event .secondary-button {
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 10px 20px;
+}

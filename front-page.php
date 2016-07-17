@@ -15,6 +15,14 @@ get_header();
         
         <?php if ( $front != 'posts' ) : ?>
             <?php do_action('zeal_homepage'); ?>
+        <?php else : ?>
+        <div class="container">
+
+            <div class="row homepage-background">
+            <?php zeal_jumbotron(); ?>
+            </div>
+        </div>
+            
         <?php endif; ?>
         
         <?php if( get_theme_mod('zeal_homepage_content_bool', 'on' ) == 'on' ) : ?>

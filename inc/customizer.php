@@ -116,16 +116,12 @@ function zeal_sanitize( $input ) {
     return $input;
 }
 
-function zeal_sanitize_post( $input ) {
-    return $input;
-}
-
 function zeal_sanitize_text( $input ) {
     return sanitize_text_field( $input );
 }
 
 function zeal_sanitize_url( $input ) {
-    return esc_url( $input );
+    return esc_url_raw( $input );
 }
 
 function zeal_sanitize_integer( $input ) {

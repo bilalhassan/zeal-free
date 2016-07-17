@@ -9,7 +9,7 @@
 jQuery( document ).ready( function( $ ){
 
     $('#customize-info .preview-notice').html('<a class="button button-primary" href="http://smartcatdesign.net/preview/zeal/" target="_BLANK">Upgrade to Zeal Pro</a>');
-    $('#customize-info .preview-notice').append('<p style="color: #cc0000">The pro version includes more color skins, a frontpage slider, more font options, an animated Ajax contact form, testimonials, FAQs, Events, services, news and more!</p>');
+    $('#customize-info .preview-notice').append('<p style="color: #cc0000">The pro version includes a Frontpage Slider, more skin colors & font options, unique custom widgets & templates such as pricing tables, contact form, testimonials, FAQs, Events, services, news and more!</p>');
 
     $( '#customize-control-zeal_theme_color input[type=radio]' ).each( function() {
 

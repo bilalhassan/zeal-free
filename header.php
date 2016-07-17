@@ -65,15 +65,6 @@
                                     <?php the_custom_logo(); ?>
                                 </span>
                                 
-                                
-<!--                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="<?php echo get_theme_mod( 'zeal_logo_or_title', 'title' ) == 'logo' ? esc_attr( '' ) : esc_attr( 'zeal-hidden' ); ?>">
-                                    <img src="<?php echo esc_url( get_theme_mod( 'zeal_header_logo', get_template_directory_uri() . '/inc/images/zeal-logo.png' ) ); ?>" 
-                                         alt="<?php esc_attr( bloginfo( 'name' ) ); ?>" 
-                                         style="height: <?php echo esc_attr( get_theme_mod( 'zeal_logo_size', 55 ) ); ?>px; width: auto;"
-                                         class="header-logo">
-                                    
-                                </a>-->
-                                
                             </div>
                             
                         </div>
@@ -91,11 +82,14 @@
                                         <ul id="primary-menu" class="menu">
 
                                             <li class="menu-item menu-item-type-custom menu-item-object-custom">
-
+                                                
+                                                <?php if( current_user_can( 'publish_posts' ) ) : ?>
                                                 <a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>">
                                                    <?php echo __( 'ADD A PRIMARY MENU?', 'zeal' ); ?>
                                                 </a>
-
+                                                <?php else : ?>
+                                                <a><?php echo __( 'Primary Menu', 'zeal' ); ?></a>
+                                                <?php endif; ?>
                                             </li>
 
                                         </ul>
@@ -114,8 +108,6 @@
             
         </div>
         
-        
-
     </header><!-- #masthead -->
 
     <div id="content" class="site-content">

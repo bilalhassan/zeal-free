@@ -35,7 +35,7 @@ $wp_customize->add_section( 'slide_settings', array (
 $wp_customize->add_setting( 'zeal_slider_bool', array (
     'default'               => 'on',
     'transport'             => 'refresh',
-    'sanitize_callback'     => 'zeal_sanitize'
+    'sanitize_callback'     => 'zeal_sanitize_cta_area_toggle'
 ) );
 
 $wp_customize->add_control( 'zeal_slider_bool', array(

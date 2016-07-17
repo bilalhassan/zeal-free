@@ -44,15 +44,15 @@ class Zeal_Theme {
 
         // Enqueue stylesheets
         
-        wp_enqueue_style('zeal-bootstrap', get_template_directory_uri() . '/inc/css/bootstrap.min.css', array(), ZEAL_VERSION);
-        wp_enqueue_style('zeal-fontawesome', get_template_directory_uri() . '/inc/css/font-awesome.min.css', array(), ZEAL_VERSION);
-        wp_enqueue_style('zeal-slicknav', get_template_directory_uri() . '/inc/css/slicknav.min.css', array(), ZEAL_VERSION);
-        wp_enqueue_style('zeal-animations', get_template_directory_uri() . '/inc/css/animate.css', array(), ZEAL_VERSION);
+        wp_enqueue_style('bootstrap', get_template_directory_uri() . '/inc/css/bootstrap.min.css', array(), ZEAL_VERSION);
+        wp_enqueue_style('fontawesome', get_template_directory_uri() . '/inc/css/font-awesome.min.css', array(), ZEAL_VERSION);
+        wp_enqueue_style('slicknav', get_template_directory_uri() . '/inc/css/slicknav.min.css', array(), ZEAL_VERSION);
+        wp_enqueue_style('animatecss', get_template_directory_uri() . '/inc/css/animate.css', array(), ZEAL_VERSION);
         wp_enqueue_style('zeal-main-style', get_template_directory_uri() . '/inc/css/style.css', array(), ZEAL_VERSION);
         wp_enqueue_style('zeal-template', get_template_directory_uri() . '/inc/css/temps/' . get_theme_mod( 'zeal_theme_color', 'teal' ) . '.min.css', array(), ZEAL_VERSION);
 
-        wp_enqueue_script('zeal-slicknav-js', get_template_directory_uri() . '/inc/js/jquery.slicknav.min.js', array('jquery'), ZEAL_VERSION, true);
-        wp_enqueue_script('zeal-wow', get_template_directory_uri() . '/inc/js/wow.min.js', array('jquery'), ZEAL_VERSION, true);
+        wp_enqueue_script('slicknav', get_template_directory_uri() . '/inc/js/jquery.slicknav.min.js', array('jquery'), ZEAL_VERSION, true);
+        wp_enqueue_script('wow', get_template_directory_uri() . '/inc/js/wow.min.js', array('jquery'), ZEAL_VERSION, true);
         wp_enqueue_script('zeal-parallax', get_template_directory_uri() . '/inc/js/parallax.min.js', array('jquery'), ZEAL_VERSION, true);
         wp_enqueue_script('zeal-custom', get_template_directory_uri() . '/inc/js/custom.js', array('jquery'), ZEAL_VERSION, true);
         
@@ -483,12 +483,13 @@ function zeal_render_footer() { ?>
         <?php endif; ?>
         
         <!-- Footer B -->
-        <?php if ( get_theme_mod( 'zeal_footer_b_toggle', 'on' ) == 'on' ) : ?>
+        
         <div class="row footer-b">
 
             <div class="col-md-12 wow fadeIn">
-                
+                <?php if ( get_theme_mod( 'zeal_footer_b_toggle', 'on' ) == 'on' ) : ?>
                 <?php get_sidebar( 'footer' ); ?>
+                 <?php endif; ?>
                 <div class="">
                     
                     <p class="footer" style="display: block !important">
@@ -504,7 +505,7 @@ function zeal_render_footer() { ?>
             </div>
 
         </div>
-        <?php endif; ?>
+       
         
         <div class="scroll-top alignright">
             <span class="fa fa-chevron-up"></span>

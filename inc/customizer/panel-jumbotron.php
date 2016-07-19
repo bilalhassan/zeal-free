@@ -130,7 +130,7 @@ $wp_customize->add_control( 'zeal_slider_height', array(
     $wp_customize->add_setting( 'zeal_hero_image', array (
         'default'               => get_template_directory_uri() . '/inc/images/zeal-demo.jpg',
         'transport'             => 'refresh',
-        'sanitize_callback'     => 'esc_raw_url',
+        'sanitize_callback'     => 'esc_url_raw',
     ) );
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'zeal_hero_image', array (
         'mime_type'             => 'image',

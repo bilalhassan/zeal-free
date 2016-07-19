@@ -1,11 +1,11 @@
 === Zeal ===
 
 Contributors: smartcat,automattic
-Tags: blog, photography, portfolio, grid-layout, footer-widgets, threaded-comments, featured-images, one-column, two-columns, three-columns, featured-image-header, theme-options, translation-ready
+Tags: blog, photography, portfolio, news, portfolio, food-and-drink, grid-layout, entertainment, footer-widgets, threaded-comments, featured-images, one-column, two-columns, three-columns, featured-image-header, theme-options, translation-ready, left-sidebar
 
 Requires at least: 4.5
 Tested up to: 4.5.3
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,9 @@ Zeal includes support for Infinite Scroll in Jetpack.
 
 = 1.0.7 - July 17th, 2016 = 
 * Display Jumbotron on Blog
+
+= 1.0.8 - July 17th, 2016 = 
+* Fix bug with Jumbotron image not changing
 
 == Credits ==
 

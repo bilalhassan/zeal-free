@@ -245,7 +245,7 @@ class Zeal_Theme {
 
             section.front-page-hero,
             div.col-md-12.hero-banner{
-                height: <?php echo esc_attr( get_theme_mod( 'zeal_slider_height', 450 ) ); ?>px;
+                height: <?php echo esc_attr( get_theme_mod( 'zeal_slider_height', 600 ) ); ?>px;
             }
         
     </style>

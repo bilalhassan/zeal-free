@@ -1,18 +1,18 @@
 === Zeal ===
 
 Contributors: smartcat,automattic
-Tags: blog, photography, portfolio, news, portfolio, food-and-drink, grid-layout, entertainment, footer-widgets, threaded-comments, featured-images, one-column, two-columns, three-columns, featured-image-header, theme-options, translation-ready, left-sidebar
+Tags: blog, photography, portfolio, food-and-drink, grid-layout, entertainment, footer-widgets, threaded-comments, featured-images, one-column, two-columns, three-columns, featured-image-header, theme-options, translation-ready, left-sidebar
 
 Requires at least: 4.5
 Tested up to: 4.5.3
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 == Description ==
 
-Zeal WordPress Theme
+A slick and stylish multi-purpose & responsive theme that you can use to easily deploy a pixel-perfect website with ease that stands out from the rest. Zeal is a beautiful theme that has been designed with content in mind, it is a multi-purpose theme that looks great for websites for a photographer, restaurant, creative agencies and individuals, lifestyle blog or a persoanl site. Zeal has tons of customization theme options, including a Parallax Jumbotron with color filter option, featured posts, multiple widget areas and a very unique design. It is user friendly and can help you build a full site quickly.
 
 == Installation ==
 	
@@ -54,6 +54,10 @@ Zeal includes support for Infinite Scroll in Jetpack.
 
 = 1.0.8 - July 17th, 2016 = 
 * Fix bug with Jumbotron image not changing
+
+= 1.0.9 - July 17th, 2016 = 
+* Update theme description
+
 
 == Credits ==
 

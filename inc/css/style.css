@@ -767,6 +767,7 @@ div.single-post-wrapper article {
 
 div.single-post-left {
     padding: 0;
+    height: auto !important;
 }
 
 div.single-post-left img {

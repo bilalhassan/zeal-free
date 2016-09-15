@@ -36,7 +36,8 @@ ul#zeal-testimonials .testimonial-content .fa.fa-quote-left,
 ul#zeal-testimonials .testimonial-author,
 .single-faq .faq-title,
 .zeal-contact-info span.fa,
-nav.comment-navigation a
+nav.comment-navigation a,
+.posts-navigation .nav-links a
 {
     color: #f1c40f;
 }
@@ -66,7 +67,8 @@ nav.main-nav ul#primary-menu > li.current-menu-item > a:hover,
 nav.main-nav a:hover,
 div.single-post-left a:hover,
 a.blog-post-read-more:hover,
-.blog-post-overlay p.post-meta a:hover
+.blog-post-overlay p.post-meta a:hover,
+.posts-navigation .nav-links a:hover
 {
     color: #CEA70B;
 }

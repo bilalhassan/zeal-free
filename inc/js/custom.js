@@ -44,11 +44,9 @@ jQuery(document).ready( function ($) {
         return false;
     });
     
-    $('.zeal-search, #zeal-search .fa.fa-close').click(function () {
-
+    $( 'body' ).on( 'click', '.zeal-search, #zeal-search .fa.fa-close', function(){
         $('#zeal-search').fadeToggle(500);
         $('.search-field').focus();
-
     });
     
     $(window).resize( function () {
